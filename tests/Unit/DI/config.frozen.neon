@@ -1,0 +1,7 @@
+extensions:
+	orisai.clock: OriNette\Clock\DI\ClockExtension
+
+services:
+	orisai.clock.clock:
+		factory: Orisai\Clock\FrozenClock(1)
+		type: Orisai\Clock\FrozenClock
