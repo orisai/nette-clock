@@ -2,6 +2,8 @@
 
 [Orisai Clock](https://github.com/orisai/clock) integration for [Nette](https://nette.org)
 
+[PSR-20](https://www.php-fig.org/psr/psr-20/) compatible
+
 ## Content
 
 - [Setup](#setup)
@@ -26,7 +28,7 @@ extensions:
 
 ## Current time
 
-Request `Clock` interface and get current time from clock
+Request `Clock` interface and get current time from clock (or `Psr\Clock\ClockInterface` for `psr/clock` compatibility)
 
 ```php
 use Orisai\Clock\Clock;

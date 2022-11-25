@@ -8,6 +8,7 @@ use Orisai\Clock\ClockHolder;
 use Orisai\Clock\FrozenClock;
 use Orisai\Clock\SystemClock;
 use PHPUnit\Framework\TestCase;
+use Psr\Clock\ClockInterface;
 use function dirname;
 use function mkdir;
 use const PHP_VERSION_ID;
@@ -37,6 +38,7 @@ final class ClockExtensionTest extends TestCase
 
 		$clock = $container->getService('orisai.clock.clock');
 		self::assertInstanceOf(SystemClock::class, $clock);
+		self::assertSame($clock, $container->getByType(ClockInterface::class));
 		self::assertSame($clock, $container->getByType(Clock::class));
 		self::assertSame($clock, ClockHolder::getClock());
 	}
@@ -51,6 +53,7 @@ final class ClockExtensionTest extends TestCase
 
 		$clock = $container->getService('orisai.clock.clock');
 		self::assertInstanceOf(FrozenClock::class, $clock);
+		self::assertSame($clock, $container->getByType(ClockInterface::class));
 		self::assertSame($clock, $container->getByType(Clock::class));
 		self::assertSame($clock, $container->getByType(FrozenClock::class));
 	}
