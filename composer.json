@@ -7,6 +7,8 @@
 		"clock",
 		"nette",
 		"orisai",
+		"psr",
+		"psr-20",
 		"time"
 	],
 	"type": "library",
