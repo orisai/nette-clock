@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/nette-clock/compare/1.0.0...HEAD)
 
+### Changed
+
 - Composer
-	- allows PHP 8.2
+  - allows PHP 8.2
+  - requires orisai/clock:^1.1.0
 
 ## [1.0.0](https://github.com/orisai/nette-clock/releases/tag/1.0.0) - 2022-08-19
 
