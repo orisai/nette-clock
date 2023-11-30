@@ -8,6 +8,8 @@
 
 - [Setup](#setup)
 - [Current time](#current-time)
+- [Sleep](#sleep)
+- [Shortcut function](#shortcut-function)
 - [Tests](#tests)
 - [Clocks](#clocks)
 
@@ -51,12 +53,40 @@ class ExampleService
 }
 ```
 
-Or get time via static function
+## Sleep
+
+To prevent waiting periods in tests, replace calls to `sleep()` and `usleep()` functions with `Clock->sleep()` method.
+
+```php
+$clock->sleep(
+	1, // Seconds
+	2, // Milliseconds
+	3, // Microseconds
+);
+```
+
+Or with named arguments, just:
+
+```php
+$clock->sleep(microseconds: 10);
+```
+
+## Shortcut function
+
+Get current time statically
 
 ```php
 use function Orisai\Clock\now;
 
 $currentTime = now(); // \DateTimeImmutable
+```
+
+It is also possible to access clock statically
+
+```php
+use Orisai\Clock\ClockHolder;
+
+$clock = ClockHolder::getClock();
 ```
 
 ## Tests
@@ -65,10 +95,10 @@ Configure clock to return exact time for testing
 
 ```neon
 services:
-	orisai.clock.clock:
-        # Accepts epoch second (timestamp)
-		factory: Orisai\Clock\FrozenClock(978307200)
-		type: Orisai\Clock\FrozenClock
+	# Set timestamp
+	orisai.clock.clock: Orisai\Clock\FrozenClock(978307200)
+	# Or a date time instance
+	orisai.clock.clock: Orisai\Clock\FrozenClock(\DateTimeImmutable('now'))
 ```
 
 ## Clocks
