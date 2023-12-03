@@ -1,6 +1,6 @@
 {
 	"name": "orisai/nette-clock",
-	"description": "Orisai Clock integration for Nette",
+	"description": "Orisai Clock and Symfony Clock integration for Nette",
 	"keywords": [
 		"date",
 		"datetime",
@@ -9,6 +9,7 @@
 		"orisai",
 		"psr",
 		"psr-20",
+		"symfony",
 		"time"
 	],
 	"type": "library",
@@ -23,7 +24,8 @@
 	"require": {
 		"php": ">=7.4.0 <8.3.0",
 		"nette/di": "^3.0.3",
-		"orisai/clock": "^1.2.0"
+		"orisai/clock": "^1.2.0",
+		"orisai/utils": "^1.0.0"
 	},
 	"require-dev": {
 		"brianium/paratest": "^6.3.0",

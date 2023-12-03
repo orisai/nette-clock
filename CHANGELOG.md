@@ -7,15 +7,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased](https://github.com/orisai/nette-clock/compare/1.0.1...HEAD)
 
-- Require `orisai/clock:^1.2.0`
+### Added
+
+- symfony/clock compatibility - automatically configure `ClockInterface` service and set static `Clock`, if package is
+  installed
+
+### Changed
+
+- Requires `orisai/clock:^1.2.0`
 
 ## [1.0.1](https://github.com/orisai/nette-clock/compare/1.0.0...1.0.1) - 2022-12-09
 
 ### Changed
 
 - Composer
-  - allows PHP 8.2
-  - requires orisai/clock:^1.1.0
+	- allows PHP 8.2
+	- requires orisai/clock:^1.1.0
 
 ## [1.0.0](https://github.com/orisai/nette-clock/releases/tag/1.0.0) - 2022-08-19
 
@@ -23,4 +30,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `ClockExtension`
 	- registers `Clock` service
-    - configures `now()` shortcut function
+	- configures `now()` shortcut function

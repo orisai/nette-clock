@@ -1,6 +1,7 @@
 # Nette Clock
 
-[Orisai Clock](https://github.com/orisai/clock) integration for [Nette](https://nette.org)
+[Orisai Clock](https://github.com/orisai/clock) and [Symfony Clock](https://github.com/symfony/clock) integration
+for [Nette](https://nette.org)
 
 [PSR-20](https://www.php-fig.org/psr/psr-20/) compatible
 
@@ -12,6 +13,7 @@
 - [Shortcut function](#shortcut-function)
 - [Tests](#tests)
 - [Clocks](#clocks)
+- [Compatibility](#compatibility)
 
 ## Setup
 
@@ -104,3 +106,10 @@ services:
 ## Clocks
 
 `Clock` implementations and their usage are described by [orisai/clock](https://github.com/orisai/clock) package.
+
+## Compatibility
+
+In case `symfony/clock` is installed, the extension automatically:
+
+- registers adapter which makes `Symfony\Component\Clock\ClockInterface` available via DIC
+- sets clock to static class `Symfony\Component\Clock\Clock` during DIC startup.

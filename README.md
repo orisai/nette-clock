@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/orisai/clock">Orisai Clock</a> integration for <a href="https://nette.org">Nette</a>
+    <a href="https://github.com/orisai/clock">Orisai Clock</a> and <a href="https://github.com/symfony/clock">Symfony Clock</a> integration for <a href="https://nette.org">Nette</a>
 </p>
 
 <p align="center">
