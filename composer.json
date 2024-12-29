@@ -22,7 +22,7 @@
 		}
 	],
 	"require": {
-		"php": "7.4 - 8.3",
+		"php": "7.4 - 8.4",
 		"nette/di": "^3.0.3",
 		"orisai/clock": "^1.2.0",
 		"orisai/utils": "^1.0.0"
