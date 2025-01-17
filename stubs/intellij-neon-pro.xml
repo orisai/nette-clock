@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE neon PUBLIC "-//NEON//Neon plugin XML V0.0.1//EN" "../.idea/intellij-neon-pro/xmlSources/Neon.xsd">
+<neon vendor="orisai/nette-clock" version="1">
+	<extensions>
+		<extension type="OriNette\Clock\DI\ClockExtension">
+			<schema>
+				<structure>
+					<!-- No config -->
+				</structure>
+			</schema>
+			<services>
+				<service name="clock" type="Orisai\Clock\Clock"/>
+				<service name="symfony.adapter" type="Orisai\Clock\Adapter\OrisaiToSymfonyClockAdapter"/>
+			</services>
+		</extension>
+	</extensions>
+</neon>
